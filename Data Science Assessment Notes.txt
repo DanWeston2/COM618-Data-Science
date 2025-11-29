@@ -1,0 +1,11 @@
+Data Science Assessment:
+For each step document and justify use of tools and techniques/relevance
+
+1. Get a medical dataset and visualise it with a variety of graphs.
+2. Clean the data.
+3. Visualise clean data and identify significant patterns and trends.
+4. Identify a problem with the dataset and how I constructed a model to make predictions or forecast trends.
+5. Critically evaluate my results and compare findings with similar studies in the field.
+
+
+Maximum 7 minute video demonstrating my model.
