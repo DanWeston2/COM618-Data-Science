@@ -3,10 +3,10 @@
 ## About the project
 This project is for the COM618 Data Science module as part of my BSc Software Engineering at Southampton Solent University.
 
-The purpose of this project is to analyse a medical dataset and make predictions about it. I will be using a mental health dataset to understand root causes as to why a person may or may not seek treatment from a medical professional.
+The purpose of this project is to analyse a medical dataset and make predictions about it. I will be using a mental health dataset to understand root causes as to why a person may or may not seek treatment from a medical professional with analysis aided by Random Forest and XGBoosted models.
 
 ## Project Status
-Cleaning, Visualisations and Data Exploration completed. Final phase of modelling begun.
+Submitted
 
 ## How to run
 In the terminal run the following code:
