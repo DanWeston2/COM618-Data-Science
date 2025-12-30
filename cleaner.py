@@ -21,6 +21,10 @@ df["Mood_Swings"] = df["Mood_Swings"].map({"High": 1, "Low": 0, "Medium": 0.5})
 df["Work_Interest"] = df["Work_Interest"].map(yesNoMaybeMap)
 df["Social_Weakness"] = df["Social_Weakness"].map(yesNoMaybeMap)
 df["care_options"] = df["care_options"].map(yesNoMaybeMap)
+df["self_employed"] = df["self_employed"].map(yesNoMaybeMap)
+df["Days_Indoors"] = df["Days_Indoors"].map({ "Go out Every day": 0, "1-14 days": 1, "15-30 days": 2, "31-60 days": 3, "More than 2 months": 4})
+
+df = pd.get_dummies(df, columns=["Occupation"], drop_first=True)
 
 df.dropna(inplace=True)
 
@@ -30,5 +34,7 @@ df = df[(zScores < 3).all(axis=1)]
 dfMale = df[df["Gender"] == "Male"].sample(n=40000, random_state=42)
 dfFemale = df[df["Gender"] == "Female"].sample(n=40000, random_state=42)
 dfSample = pd.concat([dfMale, dfFemale]).sample(frac=1, random_state=42).reset_index(drop=True)
+
+dfSample = pd.get_dummies(dfSample, columns=["Gender"], drop_first=False)
 
 dfSample.to_csv("CleanedMentalHealth.csv", index=False, header=True)
